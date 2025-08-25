@@ -6,7 +6,10 @@ export default function About() {
     <div className="bg-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/20">
-        <div className="absolute inset-0 bg-mountain-pattern opacity-40" />
+        <div className="absolute inset-0 opacity-40" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #e2e8f0 1px, transparent 0)`,
+          backgroundSize: '20px 20px'
+        }} />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
