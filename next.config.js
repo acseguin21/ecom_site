@@ -69,11 +69,8 @@ const nextConfig = {
   // React strict mode
   reactStrictMode: true,
   
-  // Experimental features
-  experimental: {
-    // Enable server components
-    serverComponentsExternalPackages: ['@stripe/stripe-js'],
-  },
+  // Server external packages (moved from experimental in Next.js 15)
+  serverExternalPackages: ['@stripe/stripe-js'],
   
   // Environment variables
   env: {

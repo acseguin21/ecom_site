@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowLeft, ShoppingBag, Star, Truck, Shield, Heart } from 'lucide-react'
 import Link from 'next/link'
 
@@ -53,18 +53,31 @@ const products = [
   },
 ]
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const [quantity, setQuantity] = useState(1)
-  const product = products.find(p => p.id === parseInt(params.id))
+  const [productId, setProductId] = useState<string | null>(null)
+  const [product, setProduct] = useState<any>(null)
 
-  if (!product) {
+  useEffect(() => {
+    // Handle async params in Next.js 15
+    const getParams = async () => {
+      const resolvedParams = await params
+      const id = resolvedParams.id
+      setProductId(id)
+      
+      const foundProduct = products.find(p => p.id === parseInt(id))
+      setProduct(foundProduct)
+    }
+    
+    getParams()
+  }, [params])
+
+  if (!productId || !product) {
     return (
       <div className="bg-white min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-slate-900 mb-4">Product Not Found</h1>
-          <Link href="/products" className="text-emerald-600 hover:text-emerald-700">
-            ← Back to Products
-          </Link>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
+          <p className="text-slate-600">Loading product...</p>
         </div>
       </div>
     )
@@ -153,7 +166,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Product Details</h3>
-                <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="font-medium text-slate-600">Category:</span>
                     <p className="text-slate-900">{product.category}</p>

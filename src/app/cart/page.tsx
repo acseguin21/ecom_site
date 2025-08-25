@@ -46,9 +46,11 @@ export default function CartPage() {
   const total = subtotal + tax + shipping
 
   const handleCheckout = async () => {
+    console.log('Checkout started, cart items:', cartItems)
     setIsLoading(true)
     
     try {
+      console.log('Making API request to create checkout session...')
       // This will be replaced with actual Stripe checkout
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
@@ -65,11 +67,20 @@ export default function CartPage() {
         }),
       })
 
+      console.log('API response status:', response.status)
+      console.log('API response ok:', response.ok)
+
       if (response.ok) {
-        const { sessionId } = await response.json()
+        const responseData = await response.json()
+        console.log('API response data:', responseData)
+        const { sessionId } = responseData
+        console.log('Session ID:', sessionId)
+        console.log('Redirecting to Stripe checkout...')
         // Redirect to Stripe Checkout
-        window.location.href = `/checkout?session_id=${sessionId}`
+        window.location.href = `https://checkout.stripe.com/pay/${sessionId}`
       } else {
+        const errorText = await response.text()
+        console.error('API error response:', errorText)
         throw new Error('Failed to create checkout session')
       }
     } catch (error) {
