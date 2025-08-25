@@ -6,9 +6,9 @@ import Navigation from '../components/Navigation'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Artisan Woodcrafts - Handcrafted Serving Boards & Cutting Boards',
-  description: 'Discover beautifully crafted serving boards and cutting boards, perfect as gifts or for your kitchen. Handmade with care and premium materials.',
-  keywords: 'woodcrafts, serving boards, cutting boards, handmade, artisan, kitchen, gifts',
+  title: 'Alpine Woodworks YYC - Handcrafted Wooden Creations',
+  description: 'Discover beautifully crafted wooden pieces from the heart of Calgary. Handmade with care, inspired by the Pacific Northwest, perfect for modern homes.',
+  keywords: 'alpine woodworks, yyc, calgary, wooden crafts, pacific northwest, handcrafted, modern wood, artisan, mountain inspired',
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-slate-50">
           <Navigation />
           {children}
         </div>
