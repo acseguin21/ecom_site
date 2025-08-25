@@ -3,13 +3,8 @@ const nextConfig = {
   // Enable standalone output for Docker
   output: 'standalone',
   
-  // Enable experimental features
-  experimental: {
-    // Enable server actions
-    serverActions: true,
-    // Enable typed routes
-    typedRoutes: true,
-  },
+  // Enable typed routes (moved from experimental in Next.js 15)
+  typedRoutes: true,
   
   // Image optimization
   images: {
@@ -93,9 +88,6 @@ const nextConfig = {
   
   // React strict mode
   reactStrictMode: true,
-  
-  // Swc minification
-  swcMinify: true,
 }
 
 module.exports = nextConfig
