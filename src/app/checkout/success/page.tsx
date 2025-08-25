@@ -142,7 +142,7 @@ export default function CheckoutSuccessPage() {
               Contact Us
             </Link>
             <a 
-              href="mailto:alpinewoodworksyyc@gmail.com"
+              href="mailto:your_business_email@gmail.com"
               className="inline-flex items-center justify-center rounded-full border-2 border-slate-300 px-6 py-3 text-slate-700 font-semibold hover:border-emerald-400 hover:text-emerald-700 transition-all duration-200"
             >
               Email Support

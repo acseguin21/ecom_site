@@ -143,6 +143,20 @@ coverage/
 # Production
 .env.production
 .env.staging
+.env.stripe
+env.production
+env.stripe.example
+
+# Security - Never commit these files
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+secrets/
+secrets.json
+secrets.yaml
+secrets.yml
 
 # Backup files
 *.bak

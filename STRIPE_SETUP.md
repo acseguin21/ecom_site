@@ -4,7 +4,7 @@
 
 ### **1. Create a Stripe Account**
 1. Go to [stripe.com](https://stripe.com) and click "Start now"
-2. Sign up with your business email: `alpinewoodworksyyc@gmail.com`
+2. Sign up with your business email: `your_business_email@gmail.com`
 3. Complete your business profile (Alpine Woodworks YYC)
 4. Verify your business information
 
@@ -110,7 +110,7 @@ npm run dev
 
 - **Stripe Support:** [support.stripe.com](https://support.stripe.com)
 - **Documentation:** [stripe.com/docs](https://stripe.com/docs)
-- **Business Email:** alpinewoodworksyyc@gmail.com
+- **Business Email:** your_business_email@gmail.com
 
 ## 🎯 **Next Steps After Setup:**
 
