@@ -8,73 +8,81 @@ import Link from 'next/link'
 const products = [
   {
     id: 1,
-    name: 'Alpine Serving Board - Walnut & Maple',
-    price: 89,
-    category: 'Serving Boards',
-    material: 'Walnut & Maple',
-    description: 'Beautifully crafted serving board perfect for charcuterie, cheese, or as a stunning centerpiece.',
-    image: '/placeholder-serving-board.jpg',
+    name: 'Edge Grain Cutting Boards 12" x 18"',
+    price: 200,
+    category: 'Cutting Boards',
+    material: 'Maple, Cherry, Paudak, Bloodwood or Walnut',
+    description: 'Professional-grade edge grain cutting board crafted from durable hardwoods. Perfect for daily use or to impress your guests.',
+    image: '/placeholder-cutting-board.jpg',
     featured: true,
+    construction: 'Edge Grain',
   },
   {
     id: 2,
-    name: 'Rocky Mountain Cutting Board - Cherry Wood',
-    price: 129,
+    name: 'Rocky Mountain End Grain Board - Cherry & Maple',
+    price: 189,
     category: 'Cutting Boards',
-    material: 'Cherry Wood',
-    description: 'Professional-grade cutting board made from premium cherry wood, perfect for daily use.',
-    image: '/placeholder-cutting-board.jpg',
+    material: 'Cherry & Maple',
+    description: 'Premium end grain construction for superior knife protection and durability. A true heirloom quality piece.',
+    image: '/placeholder-end-grain.jpg',
     featured: true,
+    construction: 'End Grain',
   },
   {
     id: 3,
-    name: 'YYC Holiday Collection',
-    price: 199,
-    category: 'Gift Sets',
-    material: 'Mixed Woods',
-    description: 'Complete collection including serving board, cutting board, and cheese knife set.',
-    image: '/placeholder-gift-set.jpg',
+    name: 'Contemporary Charcuterie Board - Walnut Accents',
+    price: 89,
+    category: 'Charcuterie Boards',
+    material: 'Maple & Walnut',
+    description: 'Elegant serving board featuring contemporary accents. Perfect for entertaining and holiday gatherings.',
+    image: '/placeholder-charcuterie.jpg',
     featured: true,
+    construction: 'Edge Grain',
   },
   {
     id: 4,
-    name: 'Rustic Charcuterie Board',
-    price: 75,
-    category: 'Serving Boards',
-    material: 'Oak & Walnut',
-    description: 'Perfect for entertaining with its rustic charm and generous size.',
-    image: '/placeholder-charcuterie.jpg',
+    name: 'YYC Serving Tray - Eye-Catching Patterns',
+    price: 79,
+    category: 'Serving Trays',
+    material: 'Maple & Tropical Accents',
+    description: 'Beautiful serving tray that incorporates eye-catching patterns and colours. Perfect for coffee service or breakfast in bed.',
+    image: '/placeholder-serving-tray.jpg',
     featured: false,
+    construction: 'Edge Grain',
   },
   {
     id: 5,
-    name: 'End-Grain Cutting Board',
+    name: 'Heritage Edge Grain Board - Pure Maple',
     price: 149,
     category: 'Cutting Boards',
-    material: 'Maple & Walnut',
-    description: 'End-grain construction for superior knife protection and durability.',
-    image: '/placeholder-end-grain.jpg',
+    material: 'Hard Maple',
+    description: 'Classic edge grain construction in pure hard maple. Timeless design that will last generations.',
+    image: '/placeholder-maple-board.jpg',
     featured: false,
+    construction: 'Edge Grain',
   },
   {
     id: 6,
-    name: 'Cheese Board Trio',
-    price: 89,
-    category: 'Serving Boards',
-    material: 'Bamboo & Walnut',
-    description: 'Three different sized boards perfect for any cheese presentation.',
-    image: '/placeholder-cheese-trio.jpg',
+    name: 'Modern Charcuterie Collection - Mixed Hardwoods',
+    price: 119,
+    category: 'Charcuterie Boards',
+    material: 'Cherry, Maple & Walnut',
+    description: 'Contemporary design featuring mixed Canadian hardwoods. Perfect for sophisticated entertaining.',
+    image: '/placeholder-modern-charcuterie.jpg',
     featured: false,
+    construction: 'Edge Grain',
   },
 ]
 
-const categories = ['All', 'Serving Boards', 'Cutting Boards', 'Gift Sets']
-const materials = ['All', 'Walnut', 'Maple', 'Cherry', 'Oak', 'Bamboo']
+const categories = ['All', 'Cutting Boards', 'Charcuterie Boards', 'Serving Trays']
+const materials = ['All', 'Maple', 'Walnut', 'Cherry', 'Mixed Hardwoods']
+const constructions = ['All', 'Edge Grain', 'End Grain']
 
 export default function ProductsPage() {
   const [cart, setCart] = useState<Array<{id: number, quantity: number}>>([])
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedMaterial, setSelectedMaterial] = useState('All')
+  const [selectedConstruction, setSelectedConstruction] = useState('All')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
 
   const addToCart = (productId: number) => {
@@ -98,7 +106,8 @@ export default function ProductsPage() {
   const filteredProducts = products.filter(product => {
     const categoryMatch = selectedCategory === 'All' || product.category === selectedCategory
     const materialMatch = selectedMaterial === 'All' || product.material.includes(selectedMaterial)
-    return categoryMatch && materialMatch
+    const constructionMatch = selectedConstruction === 'All' || product.construction === selectedConstruction
+    return categoryMatch && materialMatch && constructionMatch
   })
 
   return (
@@ -140,6 +149,17 @@ export default function ProductsPage() {
             >
               {materials.map((material) => (
                 <option key={material} value={material}>{material}</option>
+              ))}
+            </select>
+
+            {/* Construction Filter */}
+            <select 
+              className="rounded-md border-slate-300 py-2 pl-3 pr-10 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              value={selectedConstruction}
+              onChange={(e) => setSelectedConstruction(e.target.value)}
+            >
+              {constructions.map((construction) => (
+                <option key={construction} value={construction}>{construction}</option>
               ))}
             </select>
           </div>
@@ -191,6 +211,7 @@ export default function ProductsPage() {
                     </h3>
                     <p className="mt-1 text-sm text-slate-500">{product.material}</p>
                     <p className="mt-1 text-sm text-slate-500">{product.category}</p>
+                    <p className="mt-1 text-sm text-emerald-600 font-medium">{product.construction}</p>
                     <p className="mt-2 text-sm text-slate-600">{product.description}</p>
                   </div>
                   <p className="text-lg font-semibold text-slate-900">${product.price}</p>

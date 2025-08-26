@@ -218,3 +218,9 @@ redis-data/
 # Monitoring
 prometheus-data/
 grafana-data/
+
+# Photo configuration (customizable by user)
+src/config/photos.ts
+
+# User photos directory
+public/images/

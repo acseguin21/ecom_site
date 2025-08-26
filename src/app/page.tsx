@@ -33,7 +33,7 @@ export default function Home() {
             
             <p className="mt-8 text-xl leading-8 text-slate-600 max-w-3xl mx-auto">
               Discover handcrafted cutting boards, charcuterie boards, and serving trays made from premium eastern Canadian hardwoods. 
-              Each creation tells a story of craftsmanship, sustainability, and the rugged beauty of the Canadian Rockies.
+              Each piece tells a story of craftsmanship, sustainability, and the rugged beauty of the Canadian Rockies.
             </p>
             
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -76,7 +76,7 @@ export default function Home() {
             </p>
             <p className="mt-6 text-lg leading-8 text-slate-600">
               Every piece is thoughtfully designed and handcrafted using sustainable materials, 
-              inspired by the natural beauty that surrounds us in the Canadian Rockies.
+              inspired by the natural beauty surrounding us in the Canadian Rockies.
             </p>
           </div>
           
@@ -134,10 +134,10 @@ export default function Home() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-emerald-600">Featured Collection</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Premium eastern Canadian hardwoods
+              Premium edge grain and end grain boards
             </p>
             <p className="mt-6 text-lg leading-8 text-slate-600">
-              Each piece showcases the natural beauty of maple, cherry, walnut, and aspen - sometimes enhanced with tropical accent woods for that extra touch of elegance.
+              Each piece showcases the natural beauty of Canadian hardwoods with contemporary design and heirloom quality craftsmanship.
             </p>
           </div>
           
@@ -148,7 +148,7 @@ export default function Home() {
                 <div className="h-80 w-full bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <div className="text-center">
                     <Trees className="h-16 w-16 text-emerald-600 mx-auto mb-4" />
-                    <span className="text-emerald-700 text-lg font-medium">Charcuterie Board</span>
+                    <span className="text-emerald-700 text-lg font-medium">Edge Grain Board</span>
                   </div>
                 </div>
               </div>
@@ -156,11 +156,11 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   <Link href="/products" className="hover:text-emerald-600 transition-colors">
                     <span aria-hidden="true" className="absolute inset-0" />
-                    Alpine Charcuterie Board
+                    Alpine Edge Grain Cutting Board
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm text-slate-500">Cherry & Maple with Walnut Accents</p>
-                <p className="mt-2 text-lg font-semibold text-slate-900">$89</p>
+                <p className="mt-2 text-sm text-slate-500">Maple & Walnut - Edge Grain</p>
+                <p className="mt-2 text-lg font-semibold text-slate-900">$129</p>
               </div>
             </div>
 
@@ -170,7 +170,7 @@ export default function Home() {
                 <div className="h-80 w-full bg-gradient-to-br from-teal-100 to-emerald-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <div className="text-center">
                     <Mountain className="h-16 w-16 text-teal-600 mx-auto mb-4" />
-                    <span className="text-teal-700 text-lg font-medium">Cutting Board</span>
+                    <span className="text-teal-700 text-lg font-medium">End Grain Board</span>
                   </div>
                 </div>
               </div>
@@ -178,11 +178,11 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   <Link href="/products" className="hover:text-emerald-600 transition-colors">
                     <span aria-hidden="true" className="absolute inset-0" />
-                    Rocky Mountain Cutting Board
+                    Rocky Mountain End Grain Board
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm text-slate-500">Hard Maple & Walnut</p>
-                <p className="mt-2 text-lg font-semibold text-slate-900">$129</p>
+                <p className="mt-2 text-sm text-slate-500">Cherry & Maple - End Grain</p>
+                <p className="mt-2 text-lg font-semibold text-slate-900">$189</p>
               </div>
             </div>
 
@@ -192,7 +192,7 @@ export default function Home() {
                 <div className="h-80 w-full bg-gradient-to-br from-slate-100 to-emerald-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <div className="text-center">
                     <Sparkles className="h-16 w-16 text-slate-600 mx-auto mb-4" />
-                    <span className="text-slate-700 text-lg font-medium">Serving Tray</span>
+                    <span className="text-slate-700 text-lg font-medium">Contemporary Design</span>
                   </div>
                 </div>
               </div>
@@ -200,11 +200,11 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-slate-900">
                   <Link href="/products" className="hover:text-emerald-600 transition-colors">
                     <span aria-hidden="true" className="absolute inset-0" />
-                    YYC Serving Tray
+                    Contemporary Charcuterie Board
                   </Link>
                 </h3>
-                <p className="mt-2 text-sm text-slate-500">Aspen with Tropical Accents</p>
-                <p className="mt-2 text-lg font-semibold text-slate-900">$79</p>
+                <p className="mt-2 text-sm text-slate-500">Maple & Walnut - Edge Grain</p>
+                <p className="mt-2 text-lg font-semibold text-slate-900">$89</p>
               </div>
             </div>
           </div>

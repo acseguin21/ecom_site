@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Mountain, Trees, MapPin, Clock, Heart, Users, Scissors, Utensils, Palette, Star } from 'lucide-react'
+import { getPhoto, photos } from '@/config/photos'
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
               Our Story
             </h1>
             <p className="mt-6 text-xl leading-8 text-slate-600 max-w-3xl mx-auto">
-              From the heart of Calgary to the peaks of the Canadian Rockies, we craft wooden pieces that bring the beauty of eastern Canadian hardwoods into your home.
+              Hand crafted in our workshop in beautiful Calgary, AB, we craft wooden pieces that bring the beauty of Canadian hardwoods into your home.
             </p>
           </div>
         </div>
@@ -28,15 +29,15 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                Where Rockies Meet Eastern Hardwoods
+                With a Distinct Canadian Contemporary Style
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Alpine Woodworks YYC was born from a deep love for the natural beauty that surrounds us in Calgary and the Canadian Rockies. 
-                We specialize in crafting premium cutting boards, charcuterie boards, and serving trays using the finest eastern Canadian hardwoods.
+                Alpine Woodworks YYC was born from our love for the natural beauty surrounding us in Canada. From Rocky Mountain Aspens to Eastern Hard Maple, we craft wooden pieces that bring the beauty of our natural woodlands into your home.
+                We specialize in crafting premium heirloom quality cutting boards, charcuterie boards and serving trays that are timeless and elegant. We also are able to help finish your projects with a tastefully accented custom top.
               </p>
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                Our journey began in a small workshop, inspired by the rugged landscapes and sustainable practices of the Pacific Northwest. 
-                Today, we honour those traditions while working exclusively with maple, cherry, walnut, and aspen - sometimes adding tropical accent woods for that extra touch of elegance.
+                Our journey begins in a cozy workshop in Calgary, AB, inspired by our travels from coast to coast and our passion for woodworking. 
+                We are proud to be a part of the Calgary community and support local businesses and artisans whenever possible. 
               </p>
             </div>
             <div className="relative">
@@ -44,7 +45,7 @@ export default function About() {
                 <div className="text-center">
                   <Mountain className="h-24 w-24 text-emerald-600 mx-auto mb-6" />
                   <span className="text-emerald-700 text-xl font-medium">Crafted in Calgary</span>
-                  <p className="text-emerald-600 text-sm mt-2">Gateway to the Rockies</p>
+                  <p className="text-emerald-600 text-sm mt-2">Inspired by nature and contemporary design</p>
                 </div>
               </div>
             </div>
@@ -58,7 +59,7 @@ export default function About() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-emerald-600">Our Specialties</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Premium wooden boards for every occasion
+              Premium edge grain and end grain boards for every occasion
             </p>
           </div>
           
@@ -73,7 +74,7 @@ export default function About() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
                   <p className="flex-auto">
-                    Professional-grade cutting boards crafted from hard maple and walnut. Perfect for daily use, these boards are designed to last generations while maintaining their beauty and functionality.
+                    Professional-grade edge grain and end grain cutting boards crafted from durable hardwoods like maple and walnut. Perfect for daily use or to impress your guests, these boards are designed to last generations while maintaining their beauty and functionality.
                   </p>
                 </dd>
               </div>
@@ -87,7 +88,7 @@ export default function About() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
                   <p className="flex-auto">
-                    Elegant serving boards featuring cherry and maple with walnut accents. Perfect for entertaining, these boards showcase your culinary creations while adding sophistication to any gathering.
+                    Elegant serving boards featuring contemporary accents. Perfect for entertaining and holiday gatherings, these boards showcase your charcuterie arrangements while adding sophistication to any gathering.
                   </p>
                 </dd>
               </div>
@@ -101,7 +102,7 @@ export default function About() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
                   <p className="flex-auto">
-                    Beautiful serving trays that combine aspen's light beauty with tropical accent woods. These versatile pieces are perfect for coffee service, breakfast in bed, or as decorative elements in your home.
+                    Beautiful serving trays that incorporate eye catching patterns and colours. These versatile pieces are perfect for coffee service, breakfast in bed, or as decorative elements in your home.
                   </p>
                 </dd>
               </div>
@@ -115,12 +116,12 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-slate-100 to-emerald-50 border border-slate-200 flex items-center justify-center">
-                <div className="text-center">
-                  <Star className="h-24 w-24 text-emerald-600 mx-auto mb-6" />
-                  <span className="text-emerald-700 text-xl font-medium">Custom Projects</span>
-                  <p className="text-emerald-600 text-sm mt-2">Your Vision, Our Craft</p>
-                </div>
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-slate-100 to-emerald-50 border border-slate-200 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={getPhoto(photos.customProjects.tabletop)}
+                  alt="Custom tabletop example"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div>
@@ -132,8 +133,10 @@ export default function About() {
                 a special serving piece for your restaurant, or a one-of-a-kind gift, we work closely with you to create exactly what you envision.
               </p>
               <p className="mt-6 text-lg leading-8 text-slate-600">
-                From selecting the perfect combination of eastern Canadian hardwoods to incorporating tropical accents, 
-                every custom piece is a collaboration between your imagination and our expertise in working with these beautiful materials.
+                We also specialize in custom tabletops and bench tops - perfect for side tables, front entry tables, or sitting benches. 
+                These can be designed to work with metal legs for a modern industrial look, or as drop-in retrofits tops for existing furniture and cabinets. 
+                From selecting the perfect combination of Canadian hardwoods to incorporating tropical accents, 
+                every custom piece is a collaboration between your imagination and our expertise.
               </p>
             </div>
           </div>
@@ -161,8 +164,8 @@ export default function About() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
                   <p className="flex-auto">
-                    We source our eastern Canadian hardwoods responsibly and use sustainable practices to ensure we're protecting the environment 
-                    that inspires our work in the shadow of the Rockies.
+                    We source our Canadian hardwoods responsibly and use sustainable practices to protect the environment 
+                    Nature inspires every element of our work and we are proud to help preserve it for future generations.
                   </p>
                 </dd>
               </div>
@@ -176,8 +179,7 @@ export default function About() {
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
                   <p className="flex-auto">
-                    We're proud to be part of the Calgary community and support local businesses and artisans whenever possible, 
-                    just as the Rockies have supported our community for generations.
+                    We're proud to be part of the Calgary community and support local businesses and artisans whenever possible.
                   </p>
                 </dd>
               </div>
@@ -192,7 +194,7 @@ export default function About() {
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600">
                   <p className="flex-auto">
                     Every piece is handcrafted with attention to detail, ensuring that our customers receive the highest quality products 
-                    made from the finest eastern Canadian hardwoods.
+                    made from the finest Canadian hardwoods.
                   </p>
                 </dd>
               </div>
@@ -207,7 +209,7 @@ export default function About() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-emerald-600">Our Process</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              From eastern hardwood to finished treasure
+              From rough sawn hardwood to finished heirloom quality pieces
             </p>
           </div>
           
@@ -219,7 +221,7 @@ export default function About() {
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-slate-900">Source</h3>
                 <p className="mt-2 text-sm text-slate-600">
-                  We carefully select sustainable eastern Canadian hardwoods from local suppliers
+                  We carefully select sustainablely harvested Canadian hardwoods from local suppliers
                 </p>
               </div>
               
@@ -229,7 +231,7 @@ export default function About() {
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-slate-900">Design</h3>
                 <p className="mt-2 text-sm text-slate-600">
-                  Each piece is thoughtfully designed with modern aesthetics and functionality in mind
+                  Each piece is thoughtfully designed with contemporary aesthetics and functionality in mind
                 </p>
               </div>
               
@@ -249,7 +251,7 @@ export default function About() {
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-slate-900">Finish</h3>
                 <p className="mt-2 text-sm text-slate-600">
-                  Carefully finished and packaged to preserve the natural beauty of the eastern Canadian hardwoods
+                  Carefully finished and packaged to preserve the natural beauty of the Canadian hardwoods
                 </p>
               </div>
             </div>
@@ -278,10 +280,8 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <Clock className="h-6 w-6 text-emerald-600 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-slate-900">Workshop Hours</h3>
-                    <p className="text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-slate-600">Saturday: 10:00 AM - 4:00 PM</p>
-                    <p className="text-slate-500 text-sm">Custom projects by appointment</p>
+                    <h3 className="font-semibold text-slate-900">Virtual Workshop Consultation</h3>
+                    <p className="text-slate-500 text-sm">Please contact us via email to schedule a virtual consultation</p>
                   </div>
                 </div>
               </div>
@@ -292,8 +292,6 @@ export default function About() {
                 <div className="text-center">
                   <MapPin className="h-24 w-24 text-slate-600 mx-auto mb-6" />
                   <span className="text-slate-700 text-xl font-medium">Calgary, AB</span>
-                  <p className="text-slate-500 mt-2">Heart of the Rockies</p>
-                  <p className="text-slate-400 text-sm">Eastern Hardwoods</p>
                 </div>
               </div>
             </div>
@@ -309,7 +307,7 @@ export default function About() {
               Ready to explore our collection?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Discover handcrafted pieces that bring the beauty of eastern Canadian hardwoods and the spirit of the Rockies into your home.
+              Discover handcrafted pieces that bring the beauty of Canadian woodland hardwoods and the spirit of the Rockies into your home.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link 
