@@ -93,14 +93,21 @@ export default function CartPage() {
 
   if (cartItems.length === 0) {
     return (
-      <div className="bg-white min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <ShoppingBag className="h-16 w-16 text-slate-400 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-slate-900 mb-4">Your cart is empty</h1>
-          <p className="text-slate-600 mb-8">Start shopping to add some beautiful woodcrafts to your cart!</p>
+      <div className="bg-gradient-to-br from-amber-50 via-orange-50/20 to-amber-100/10 min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/images/custom-tabletop.jpeg"
+            alt="Alpine Woodworks Tabletop"
+            className="w-full h-full object-cover opacity-10"
+          />
+        </div>
+        <div className="relative text-center">
+          <ShoppingBag className="h-16 w-16 text-amber-400 mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-amber-900 mb-4">Your cart is empty</h1>
+          <p className="text-amber-700 mb-8">Start shopping to add some beautiful woodcrafts to your cart!</p>
           <Link 
             href="/products"
-            className="inline-flex items-center rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center rounded-full bg-gradient-to-r from-amber-600 to-orange-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
           >
             Browse Products
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -111,56 +118,61 @@ export default function CartPage() {
   }
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-8">Shopping Cart</h1>
+    <div className="bg-gradient-to-br from-amber-50 via-orange-50/20 to-amber-100/10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold tracking-tight text-amber-900 mb-4">Your Shopping Cart</h1>
+          <p className="text-lg text-amber-700 max-w-2xl mx-auto">
+            Review your carefully selected woodcrafts before checkout
+          </p>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Cart Items */}
           <div className="lg:col-span-2">
             <div className="space-y-6">
               {cartItems.map((item) => (
-                <div key={item.id} className="flex gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                <div key={item.id} className="flex gap-6 p-8 bg-gradient-to-br from-white to-amber-50/30 rounded-2xl border-2 border-amber-200 shadow-lg hover:shadow-xl transition-all duration-300">
                   {/* Product Image */}
-                  <div className="w-24 h-24 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center flex-shrink-0">
-                    <span className="text-emerald-700 text-sm font-medium text-center px-2">
+                  <div className="w-28 h-28 rounded-xl bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center flex-shrink-0 border-2 border-amber-300 shadow-md">
+                    <span className="text-amber-800 text-sm font-medium text-center px-3 leading-tight">
                       {item.name}
                     </span>
                   </div>
                   
                   {/* Product Details */}
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.name}</h3>
-                    <p className="text-slate-600 mb-4">${item.price}</p>
+                    <h3 className="text-xl font-semibold text-amber-900 mb-3">{item.name}</h3>
+                    <p className="text-amber-700 text-lg font-medium mb-4">${item.price}</p>
                     
                     {/* Quantity Controls */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-4">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="p-1 rounded-full bg-white border border-slate-300 hover:bg-slate-50 transition-colors"
+                        className="p-2 rounded-full bg-white border-2 border-amber-300 hover:bg-amber-50 hover:border-amber-400 transition-all duration-200 shadow-sm"
                       >
-                        <Minus className="h-4 w-4 text-slate-600" />
+                        <Minus className="h-4 w-4 text-amber-700" />
                       </button>
-                      <span className="text-slate-900 font-medium min-w-[2rem] text-center">
+                      <span className="text-amber-900 font-bold min-w-[2rem] text-center text-lg">
                         {item.quantity}
                       </span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="p-1 rounded-full bg-white border border-slate-300 hover:bg-slate-50 transition-colors"
+                        className="p-2 rounded-full bg-white border-2 border-amber-300 hover:bg-amber-50 hover:border-amber-400 transition-all duration-200 shadow-sm"
                       >
-                        <Plus className="h-4 w-4 text-slate-600" />
+                        <Plus className="h-4 w-4 text-amber-700" />
                       </button>
                     </div>
                   </div>
                   
                   {/* Price and Remove */}
                   <div className="text-right">
-                    <p className="text-lg font-semibold text-slate-900 mb-4">
+                    <p className="text-2xl font-bold text-amber-900 mb-4">
                       ${(item.price * item.quantity).toFixed(2)}
                     </p>
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="text-slate-400 hover:text-red-500 transition-colors"
+                      className="text-amber-400 hover:text-red-500 transition-colors p-2 rounded-full hover:bg-red-50"
                     >
                       <Trash2 className="h-5 w-5" />
                     </button>
@@ -172,24 +184,26 @@ export default function CartPage() {
           
           {/* Order Summary */}
           <div className="lg:col-span-1">
-            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sticky top-8">
-              <h2 className="text-xl font-semibold text-slate-900 mb-6">Order Summary</h2>
+            <div className="bg-gradient-to-br from-white to-amber-50/40 rounded-2xl border-2 border-amber-200 p-8 sticky top-8 shadow-xl">
+              <h2 className="text-2xl font-bold text-amber-900 mb-8">Order Summary</h2>
               
-              <div className="space-y-4 mb-6">
-                <div className="flex justify-between text-slate-600">
+              <div className="space-y-5 mb-8">
+                <div className="flex justify-between text-amber-700 font-medium">
                   <span>Subtotal</span>
                   <span>${subtotal.toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between text-slate-600">
+                <div className="flex justify-between text-amber-700 font-medium">
                   <span>Tax (5%)</span>
                   <span>${tax.toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between text-slate-600">
+                <div className="flex justify-between text-amber-700 font-medium">
                   <span>Shipping</span>
-                  <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+                  <span className={shipping === 0 ? 'text-amber-600 font-semibold' : ''}>
+                    {shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}
+                  </span>
                 </div>
-                <div className="border-t border-slate-200 pt-4">
-                  <div className="flex justify-between text-lg font-semibold text-slate-900">
+                <div className="border-t-2 border-amber-200 pt-5">
+                  <div className="flex justify-between text-xl font-bold text-amber-900">
                     <span>Total</span>
                     <span>${total.toFixed(2)}</span>
                   </div>
@@ -199,7 +213,7 @@ export default function CartPage() {
               <button
                 onClick={handleCheckout}
                 disabled={isLoading || cartItems.length === 0}
-                className="w-full rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                className="w-full rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 px-6 py-4 text-lg font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group-hover:from-amber-700 group-hover:to-orange-700"
               >
                 {isLoading ? (
                   <>
@@ -214,7 +228,7 @@ export default function CartPage() {
                 )}
               </button>
               
-              <p className="text-xs text-slate-500 mt-4 text-center">
+              <p className="text-xs text-amber-600 mt-4 text-center font-medium">
                 Secure checkout powered by Stripe
               </p>
             </div>

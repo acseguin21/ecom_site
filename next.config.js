@@ -46,7 +46,7 @@ const nextConfig = {
               "default-src 'self'",
               "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.stripe.com",
               "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https: https://images.unsplash.com",
+              "img-src 'self' data: blob: https: https://images.unsplash.com",
               "font-src 'self'",
               "connect-src 'self' https://api.stripe.com",
               "frame-src https://js.stripe.com https://hooks.stripe.com",

@@ -5,16 +5,24 @@ export default function ContactPage() {
     <div className="bg-white">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-amber-50 to-orange-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Get in Touch
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
-              Have questions about our woodcrafts? Want to place a custom order? 
-              We'd love to hear from you.
-            </p>
-          </div>
+        <div className="absolute inset-0">
+          <img 
+            src="/images/serving-tray-featured.jpeg"
+            alt="Alpine Woodworks Serving Tray"
+            className="w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-900/30 via-amber-800/20 to-transparent" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+                  <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-amber-900 sm:text-6xl">
+            Get in Touch
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-amber-800 max-w-3xl mx-auto">
+            Have questions about our woodcrafts? Want to place a custom order? 
+            We'd love to hear from you.
+          </p>
+        </div>
         </div>
       </div>
 
@@ -23,71 +31,71 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div>
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold tracking-tight text-amber-900 mb-6">
               Send us a Message
             </h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 mb-2">
+                                    <label htmlFor="first-name" className="block text-sm font-medium text-amber-800 mb-2">
                     First Name
                   </label>
                   <input
                     type="text"
                     name="first-name"
                     id="first-name"
-                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500 sm:text-sm"
+                    className="block w-full rounded-lg border-amber-200 shadow-sm focus:border-amber-500 focus:ring-amber-500/20 sm:text-sm bg-white/80"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="last-name" className="block text-sm font-medium text-amber-800 mb-2">
                     Last Name
                   </label>
                   <input
                     type="text"
                     name="last-name"
                     id="last-name"
-                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500 sm:text-sm"
+                    className="block w-full rounded-lg border-amber-200 shadow-sm focus:border-amber-500 focus:ring-amber-500/20 sm:text-sm bg-white/80"
                     placeholder="Doe"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-amber-800 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500 sm:text-sm"
+                  className="block w-full rounded-lg border-amber-200 shadow-sm focus:border-amber-500 focus:ring-amber-500/20 sm:text-sm bg-white/80"
                   placeholder="john@example.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-amber-800 mb-2">
                   Phone Number
-                </label>
+                  </label>
                 <input
                   type="tel"
                   name="phone"
                   id="phone"
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500 sm:text-sm"
+                  className="block w-full rounded-lg border-amber-200 shadow-sm focus:border-amber-500 focus:ring-amber-500/20 sm:text-sm bg-white/80"
                   placeholder="(555) 123-4567"
-                />
+                  />
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-amber-800 mb-2">
                   Subject
                 </label>
                 <select
                   name="subject"
                   id="subject"
-                  className="block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring-amber-500 sm:text-sm"
+                  className="block w-full rounded-lg border-amber-200 shadow-sm focus:border-amber-500 focus:ring-amber-500/20 sm:text-sm bg-white/80"
                 >
                   <option>General Inquiry</option>
                   <option>Custom Order</option>

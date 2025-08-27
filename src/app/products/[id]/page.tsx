@@ -76,8 +76,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
     return (
       <div className="bg-white min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading product...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto mb-4"></div>
+          <p className="text-amber-700">Loading product...</p>
         </div>
       </div>
     )
@@ -93,7 +93,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}
         <nav className="mb-8">
-          <Link href="/products" className="text-emerald-600 hover:text-emerald-700 flex items-center gap-2">
+          <Link href="/products" className="text-amber-600 hover:text-amber-700 flex items-center gap-2">
             <ArrowLeft className="h-4 w-4" />
             Back to Products
           </Link>

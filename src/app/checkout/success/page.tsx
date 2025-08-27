@@ -33,8 +33,8 @@ function CheckoutSuccessContent() {
     return (
       <div className="bg-white min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading your order details...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto mb-4"></div>
+          <p className="text-amber-700">Loading your order details...</p>
         </div>
       </div>
     )
@@ -45,13 +45,13 @@ function CheckoutSuccessContent() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
         {/* Success Header */}
         <div className="text-center mb-12">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 mb-6">
-            <CheckCircle className="h-8 w-8 text-emerald-600" />
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-amber-100 mb-6">
+            <CheckCircle className="h-8 w-8 text-amber-600" />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-4">
+          <h1 className="text-3xl font-bold tracking-tight text-amber-900 mb-4">
             Thank you for your order!
           </h1>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-amber-700">
             Your payment has been processed successfully. We're excited to craft your beautiful wooden pieces!
           </p>
         </div>

@@ -6,7 +6,7 @@ export const photos = {
   // Hero and branding images
   hero: {
     background: '/images/hero-background.jpg', // Main hero background
-    logo: '/images/alpine-woodworks-logo.png', // Your business logo
+    logo: '/images/alpine-woodworks-logo.jpeg', // Your business logo
   },
   
   // Product category images
