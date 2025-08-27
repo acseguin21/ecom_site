@@ -1,6 +1,6 @@
-# Production Deployment Guide
+# 🚀 Production Deployment Guide - Alpine Woodworks YYC
 
-This guide covers deploying the Artisan Woodcrafts ecommerce platform to production environments.
+This guide covers deploying the Alpine Woodworks YYC ecommerce platform to production environments. 🏔️✨
 
 ## 🏗️ Architecture Overview
 
@@ -50,8 +50,8 @@ newgrp docker
 ### 3. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/artisan-woodcrafts.git /opt/artisan-woodcrafts
-cd /opt/artisan-woodcrafts
+git clone https://github.com/yourusername/alpine-woodworks-yyc.git /opt/alpine-woodworks-yyc
+cd /opt/alpine-woodworks-yyc
 ```
 
 ### 4. Configure Environment
@@ -324,4 +324,18 @@ For multiple servers:
 
 ---
 
-**Remember**: Always test changes in staging before production deployment!
+**Remember**: Always test changes in staging before production deployment! ✅
+
+---
+
+## 🥚 **Easter Egg Alert! 🥚**
+
+**Made with love by Andre Seguin in Calgary, Alberta, Canada** 🇨🇦
+
+*"Crafting digital experiences as beautiful as your woodwork!"* 🪵💻✨
+
+**Contact Alpine Woodworks YYC**: alpinewoodworksyyc@gmail.com 📧
+
+---
+
+*Built with ❤️ for Alpine Woodworks YYC* 🏔️

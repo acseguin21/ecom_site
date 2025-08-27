@@ -1,7 +1,10 @@
 {
-  "name": "ecom_site",
+  "name": "alpine-woodworks-yyc",
   "version": "0.1.0",
   "private": true,
+  "description": "🏔️ Premium ecommerce platform for Alpine Woodworks YYC - Handcrafted wooden pieces from Calgary, Alberta! 🍁✨",
+  "author": "Andre Seguin <andreseguin@example.com>",
+  "keywords": ["ecommerce", "woodworking", "calgary", "alberta", "handcrafted", "cutting-boards", "serving-trays"],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -29,5 +32,6 @@
     "eslint-config-next": "15.5.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "easterEgg": "🥚 Made with love by Andre Seguin in Calgary, Alberta, Canada 🇨🇦 - Crafting digital experiences as beautiful as your woodwork! 🪵💻✨"
 }

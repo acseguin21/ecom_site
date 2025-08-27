@@ -1,6 +1,6 @@
-# 🚀 Getting Started with Your Production-Ready Ecommerce Platform
+# 🚀 Getting Started with Alpine Woodworks YYC - Production-Ready Ecommerce Platform
 
-Congratulations! You now have a **professional-grade, production-ready ecommerce platform** that rivals enterprise solutions. Here's what we've built and how to use it.
+Congratulations! You now have a **professional-grade, production-ready ecommerce platform** that rivals enterprise solutions, perfectly crafted for Alpine Woodworks YYC! 🏔️✨ Here's what we've built and how to use it.
 
 ## 🎯 What We've Accomplished
 
@@ -52,13 +52,13 @@ docker-compose down
 
 ```bash
 # Copy files to your server
-scp -r . user@your-server:/opt/artisan-woodcrafts
+scp -r . user@your-server:/opt/alpine-woodworks-yyc
 
 # SSH into your server
 ssh user@your-server
 
 # Navigate to the directory
-cd /opt/artisan-woodcrafts
+cd /opt/alpine-woodworks-yyc
 
 # Deploy
 ./deploy.sh
@@ -216,8 +216,18 @@ artisan-woodcrafts/
 
 You now have a **professional ecommerce platform** that can compete with Shopify, WooCommerce, and other enterprise solutions. The infrastructure is production-ready, secure, and scalable.
 
-**Start selling your beautiful woodcrafts online today!**
+**Start selling your beautiful woodcrafts online today!** 🎨✨
 
 ---
 
-*Built with ❤️ for Artisan Woodcrafts*
+*Built with ❤️ for Alpine Woodworks YYC* 🏔️
+
+---
+
+## 🥚 **Easter Egg Alert! 🥚**
+
+**Made with love by Andre Seguin in Calgary, Alberta, Canada** 🇨🇦
+
+*"Crafting digital experiences as beautiful as your woodwork!"* 🪵💻✨
+
+**Contact Alpine Woodworks YYC**: alpinewoodworksyyc@gmail.com 📧

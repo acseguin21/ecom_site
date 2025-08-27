@@ -1,6 +1,6 @@
-# Artisan Woodcrafts Ecommerce Platform
+# 🏔️ Alpine Woodworks YYC - Premium Ecommerce Platform
 
-A modern, self-hosted ecommerce website built with Next.js for showcasing and selling handcrafted serving boards and cutting boards.
+A modern, self-hosted ecommerce website built with Next.js for showcasing and selling handcrafted serving boards, cutting boards, and serving trays from the heart of Calgary, Alberta! 🍁✨
 
 ## 🚀 Features
 
@@ -68,8 +68,9 @@ src/
 ## 🎨 Customization
 
 ### Branding
-- Update the business name in `src/components/Navigation.tsx`
-- Modify colors in `tailwind.config.js` (currently uses amber/orange theme)
+- Business name: **Alpine Woodworks YYC** 🏔️
+- Contact: **alpinewoodworksyyc@gmail.com** 📧
+- Colors: Beautiful amber/orange theme inspired by Canadian hardwoods 🍁
 - Update metadata in `src/app/layout.tsx`
 
 ### Products
@@ -177,10 +178,11 @@ The site is already mobile-responsive, but consider:
 ## 🆘 Support
 
 For questions or issues:
-1. Check the Next.js documentation
-2. Review Tailwind CSS documentation
-3. Check browser console for errors
-4. Verify all dependencies are installed
+1. Check the Next.js documentation 📚
+2. Review Tailwind CSS documentation 🎨
+3. Check browser console for errors 🔍
+4. Verify all dependencies are installed ✅
+5. **Contact Alpine Woodworks YYC**: alpinewoodworksyyc@gmail.com 📧
 
 ## 📄 License
 
@@ -188,6 +190,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ for Artisan Woodcrafts**
+**Built with ❤️ for Alpine Woodworks YYC** 🏔️
 
-Start selling your beautiful woodcrafts online today!
+Start selling your beautiful woodcrafts online today! 🎨✨
+
+---
+
+## 🥚 **Easter Egg Alert! 🥚**
+
+**Made with love by Andre Seguin in Calgary, Alberta, Canada** 🇨🇦
+
+*"Crafting digital experiences as beautiful as your woodwork!"* 🪵💻✨

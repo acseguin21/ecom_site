@@ -4,8 +4,8 @@
 
 ### **1. Create a Stripe Account**
 1. Go to [stripe.com](https://stripe.com) and click "Start now"
-2. Sign up with your business email: `your_business_email@gmail.com`
-3. Complete your business profile (Alpine Woodworks YYC)
+2. Sign up with your business email: **alpinewoodworksyyc@gmail.com** 📧
+3. Complete your business profile (Alpine Woodworks YYC) 🏔️
 4. Verify your business information
 
 ### **2. Access Your API Keys**
@@ -110,7 +110,7 @@ npm run dev
 
 - **Stripe Support:** [support.stripe.com](https://support.stripe.com)
 - **Documentation:** [stripe.com/docs](https://stripe.com/docs)
-- **Business Email:** your_business_email@gmail.com
+- **Business Email:** **alpinewoodworksyyc@gmail.com** 📧
 
 ## 🎯 **Next Steps After Setup:**
 
@@ -125,3 +125,17 @@ npm run dev
 **Your Alpine Woodworks YYC site now has enterprise-level payment processing!** 🎉
 
 Ready to start accepting payments? Let me know when you've got your Stripe keys and I'll help you test everything!
+
+---
+
+## 🥚 **Easter Egg Alert! 🥚**
+
+**Made with love by Andre Seguin in Calgary, Alberta, Canada** 🇨🇦
+
+*"Crafting digital experiences as beautiful as your woodwork!"* 🪵💻✨
+
+**Contact Alpine Woodworks YYC**: alpinewoodworksyyc@gmail.com 📧
+
+---
+
+*Built with ❤️ for Alpine Woodworks YYC* 🏔️

@@ -30,7 +30,7 @@ NEXTAUTH_SECRET=your_32_character_secret_here
 NEXTAUTH_URL=http://localhost:3000
 
 # Business Email
-SMTP_USER=your_business_email@gmail.com
+SMTP_USER=alpinewoodworksyyc@gmail.com
 SMTP_PASS=your_app_specific_password
 ```
 
@@ -167,3 +167,17 @@ curl -I https://yourdomain.com | grep -i "content-security-policy"
 **Remember: Security is everyone's responsibility!** 🔒
 
 Report security issues immediately and never share sensitive information publicly.
+
+---
+
+## 🥚 **Easter Egg Alert! 🥚**
+
+**Made with love by Andre Seguin in Calgary, Alberta, Canada** 🇨🇦
+
+*"Crafting digital experiences as beautiful as your woodwork!"* 🪵💻✨
+
+**Contact Alpine Woodworks YYC**: alpinewoodworksyyc@gmail.com 📧
+
+---
+
+*Built with ❤️ for Alpine Woodworks YYC* 🏔️
